@@ -5,6 +5,7 @@
 --
 
 
+<<<<<<< HEAD
 insert into products (name, description, code, price) values ('Nigiri zalm', '2 stukjes', '816905633-0', 3.95);
 insert into products (name, description, code, price) values ('Nigiri tonijn', '2 stuks', '077030122-3', 3.95);
 insert into products (name, description, code, price) values ('Nigiri crab', '2 stuks', '445924201-x', 3.95);
@@ -19,10 +20,16 @@ insert into products (name, description, code, price) values ('Sashimi tonijn', 
 insert into products (name, description, code, price) values ('Sashimi makreel', '4 plakjes', '690994502-6', 4.50;
 insert into products (name, description, code, price) values ('Gunkan Sake', 'zalm, olijfolie en sesam. 3 stuks', '676124066-2', 5.00);
 insert into products (name, description, code, price) values ('Gunkan Maguro', 'tonijn, olijfolie en sesam. 3 stuks', '457174385-8', 5.00);
-insert into products (name, description, code, price) values ('Gunkan Suzuki, zeebaars. 3 stuks');
-insert into products (name, description, code, price) values ();
-insert into products (name, description, code, price) values ();
-insert into products (name, description, code, price) values ();
-insert into products (name, description, code, price) values ();
-insert into products (name, description, code, price) values ();
-insert into products (name, description, code, price) values ();
+insert into products (name, description, code, price) values ('Gunkan Suzuki', 'zeebaars. 3 stuks', '031445258-3', 5.50);
+insert into products (name, description, code, price) values ('Chicken wings','6 stuks', '719322921-4', 4.80);
+insert into products (name, description, code, price) values ('Spring rolls', '10 stuks', '514202783-3', 5.50);
+insert into products (name, description, code, price) values ('Gyoza', 'kippastei. 6 stuks','185213824-6', 6.00);
+insert into products (name, description, code, price) values ('Yakitori', 'Kipspsies 5 stuks','229696258-0', 6.00);
+insert into products (name, description, code, price) values ('Ebi fry', 'gefrituurde garnalen 6 stuks','462606529-5', 7.00);
+insert into products (name, description, code, price) values ('Shrimp croquettes', 'garnalen kroketten 6 stuks','094829684-4', 6.00);
+insert into products (name, description, code, price) values ('Sashimi salade','zalm salade','757434486-8', 5.50);
+insert into products (name, description, code, price) values ('Wakame salade','zeewier salade','531150277-0', 5.00);
+insert into products (name, description, code, price) values ('Ebiko salade','krab salade','891005079-9', 4.50);
+
+
+>>>>>>> ab5025ad8f79677dd9d1a204bfb3e1320332c70a
