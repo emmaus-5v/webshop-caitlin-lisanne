@@ -6,3 +6,6 @@ CREATE TABLE products (
   description TEXT,
   price NUMERIC(10, 2)
 );
+
+CREATE TABLE new_table_name AS 
+  SELECT 
