@@ -4,7 +4,7 @@
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-
+insert into products (name, description, code, price) values ('Nigiri zalm', '2 stukjes', '816905633-0', 3.95);
 insert into products (name, description, code, price) values ('Nigiri tonijn', '2 stuks', '077030122-3', 3.95);
 insert into products (name, description, code, price) values ('Nigiri crab', '2 stuks', '445924201-x', 3.95);
 insert into products (name, description, code, price) values ('Maki komkommer', '6 stuks', '693155505-7', 4.50);

@@ -6,3 +6,24 @@ CREATE TABLE products (
   description TEXT,
   price NUMERIC(10, 2)
 );
+
+SELECT * FROM products
+WHERE name  LIKE "%Nigiri";
+
+SELECT * FROM products
+WHERE name  LIKE "%Maki";
+
+SELECT * FROM products
+WHERE name  LIKE "%Uramaki";
+
+SELECT * FROM products
+WHERE name  LIKE "%Sashimi";
+
+SELECT * FROM products
+WHERE name  LIKE "%Gunkan";
+
+SELECT * FROM products
+WHERE name NOT LIKE "%Nigiri";
+
+SELECT * FROM products
+WHERE name  LIKE "%salade";
