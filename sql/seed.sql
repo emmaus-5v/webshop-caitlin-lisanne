@@ -4,6 +4,11 @@
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> d8c35b1b75895e4b208983a6ad96d0cb23ed77b2
 insert into products (name, description, code, price) values ('Nigiri zalm', '2 stukjes', '816905633-0', 3.95);
 insert into products (name, description, code, price) values ('Nigiri tonijn', '2 stuks', '077030122-3', 3.95);
 insert into products (name, description, code, price) values ('Nigiri crab', '2 stuks', '445924201-x', 3.95);
@@ -25,6 +30,7 @@ insert into products (name, description, code, price) values ('Gyoza', 'kippaste
 insert into products (name, description, code, price) values ('Yakitori', 'Kipspsies 5 stuks','229696258-0', 6.00);
 insert into products (name, description, code, price) values ('Ebi fry', 'gefrituurde garnalen 6 stuks','462606529-5', 7.00);
 insert into products (name, description, code, price) values ('Shrimp croquettes', 'garnalen kroketten 6 stuks','094829684-4', 6.00);
+<<<<<<< HEAD
  insert into products (name, description, code, price) values ('Sashimi salade','zalm salade','757434486-8', 5.50);
  insert into products (name, description, code, price) values ('Wakame salade','zeewier salade','531150277-0', 5.00);
  insert into products (name, description, code, price) values ('Ebiko salade','krab salade','891005079-9', 4.50);
@@ -32,3 +38,16 @@ insert into products (name, description, code, price) values ('Shrimp croquettes
  insert into soort (name) values ('Nigiri');
  insert into soort (name) values ('Maki');
  insert into soort (name) values ('Uramaki');
+=======
+insert into products (name, description, code, price) values ('Sashimi salade','zalm salade','757434486-8', 5.50);
+insert into products (name, description, code, price) values ('Wakame salade','zeewier salade','531150277-0', 5.00);
+insert into products (name, description, code, price) values ('Ebiko salade','krab salade','891005079-9', 4.50);
+insert into soort (name) values ('Nigiri');
+insert into soort (name) values ('Maki');
+insert into soort (name) values ('Uramaki');
+insert into soort (name) values ('Sashimi');
+insert into soort (name) values ('Gunkan');
+insert into soort (name) values ('Side dish');
+insert into soort (name) values ('Salade');
+>>>>>>> ab5025ad8f79677dd9d1a204bfb3e1320332c70a
+>>>>>>> d8c35b1b75895e4b208983a6ad96d0cb23ed77b2
