@@ -1,11 +1,15 @@
-DROP TABLE IF EXISTS products; 
-CREATE TABLE products (
-  ID SERIAL PRIMARY KEY,
-  code VARCHAR(15),
-  name VARCHAR(255),
-  description TEXT,
-  price NUMERIC(10, 2)
-);
+<<<<<<< HEAD
+SELECT * FROM products
+WHERE name  LIKE "%Nigiri";
+
+@@ -24,44 +23,7 @@ SELECT * FROM products
+WHERE name  LIKE "%Gunkan";
+
+SELECT * FROM products
+WHERE name NOT LIKE "%Nigiri";
+
+SELECT * FROM products
+WHERE name  LIKE "%salade";
 
 CREATE TABLE soort (
   name VARCHAR(200)
@@ -40,11 +44,11 @@ CREATE TABLE gunkan_soort AS Gunkan
  WHERE name = 'Gunkan Sake'
  AND name = 'Gunkan Maguro'
  AND name = 'Gunkan Suzuki';
+WHERE name LIKE "%salade";
 
 CREATE TABLE sidedish_soort AS Side dish
  SELECT * FROM products
- WHERE name = 'Chicken wings'
- AND name = 'Spring rolls'
+@@ -70,12 +32,4 @@ CREATE TABLE sidedish_soort AS Side dish
  AND name = 'Gyoza'
  AND name = 'Yakitori'
  AND name = 'Ebi fry'
@@ -56,3 +60,5 @@ CREATE TABLE salade_soort AS salade
   AND name = 'Wakame salade'
   AND name = 'Ebiko salade';
 
+>>>>>>> d8c35b1b75895e4b208983a6ad96d0cb23ed77b2
+ AND name = 'Shrimp croquettes'; 
