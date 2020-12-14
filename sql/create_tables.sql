@@ -1,12 +1,18 @@
+DROP TABLE IF EXISTS products;
+CREATE TABLE products (
+  ID SERIAL PRIMARY KEY,
+  code VARCHAR(15),
+  name VARCHAR(255),
+  description VARCHAR(255),
+  price NUMERIC(10, 2)
+);
 
-<<<<<<< HEAD
-CREATE TABLE products 
-  ID SERIAL PRIMARY KEY
-  code VARCHAR(15),	
-  name VARCHAR(255),	
-  price NUMERIC(10, 2)	
-);	
-
+DROP TABLE IF EXISTS soort;
+CREATE TABLE soort (
+  ID SERIAL PRIMARY KEY,
+  name VARCHAR(255)
+);
+/*
 SELECT * FROM products
 WHERE name  LIKE "%Nigiri";
 
@@ -27,9 +33,17 @@ WHERE name NOT LIKE "%Nigiri";
 
 SELECT * FROM products
 WHERE name  LIKE "%salade";
+*/
 
+DROP TABLE IF EXISTS nigiri_soort;
+CREATE TABLE nigiri_soort (
+  ID SERIAL PRIMARY KEY,
+  visnaam VARCHAR(255),	
+  price NUMERIC(10, 2)	
+);
 
-CREATE TABLE nigiri_soort AS Nigiri
+/*
+AS NigAiri
  SELECT * FROM products 
   WHERE name = 'Nigiri zalm' 
   AND name = 'Nigiri tonijn' 
@@ -72,3 +86,4 @@ CREATE TABLE salade_soort AS salade
   AND name = 'Wakame salade'
   AND name = 'Ebiko salade';
 
+*/
