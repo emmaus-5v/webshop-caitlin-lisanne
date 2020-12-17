@@ -56,6 +56,48 @@ CREATE TABLE nigiri_soort (
   price NUMERIC(10, 2)	
 );
 
+DROP TABLE IF EXISTS maki_soort;
+CREATE TABLE maki_soort (
+  ID SERIAL PRIMARY KEY,
+  visnaam VARCHAR(255),	
+  price NUMERIC(10, 2)	
+);
+
+DROP TABLE IF EXISTS uramaki_soort;
+CREATE TABLE uramaki_soort (
+  ID SERIAL PRIMARY KEY,
+  visnaam VARCHAR(255),	
+  price NUMERIC(10, 2)	
+);
+
+DROP TABLE IF EXISTS sashimi_soort;
+CREATE TABLE sashimi_soort (
+  ID SERIAL PRIMARY KEY,
+  visnaam VARCHAR(255),	
+  price NUMERIC(10, 2)	
+);
+
+DROP TABLE IF EXISTS gunkan_soort;
+CREATE TABLE gunkan_soort (
+  ID SERIAL PRIMARY KEY,
+  visnaam VARCHAR(255),	
+  price NUMERIC(10, 2)	
+);
+
+DROP TABLE IF EXISTS side dish_soort;
+CREATE TABLE side dish_soort (
+  ID SERIAL PRIMARY KEY,
+  visnaam VARCHAR(255),	
+  price NUMERIC(10, 2)	
+);
+
+DROP TABLE IF EXISTS salad_soort;
+CREATE TABLE salad_soort (
+  ID SERIAL PRIMARY KEY,
+  visnaam VARCHAR(255),	
+  price NUMERIC(10, 2)	
+);
+
 /*
 AS NigAiri
  SELECT * FROM products 
