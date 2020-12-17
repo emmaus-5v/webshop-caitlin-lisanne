@@ -35,41 +35,6 @@ SELECT * FROM products
 WHERE name  LIKE "%salade";
 */
 
-DROP TABLE IF EXISTS related_products;
-CREATE TABLE related_products(
-  ID SERIAL PRIMARY KEY,
-  nigiri_soort.id INTEGER,
-  sidedish_soort.id INTEGER
-);
-
-DROP TABLE IF EXISTS related_products;
-CREATE TABLE related_products(
-  ID SERIAL PRIMARY KEY,
-  maki_soort.id INTEGER,
-  salad_soort.id INTEGER
-);
-
-DROP TABLE IF EXISTS related_products;
-CREATE TABLE related_products(
-  ID SERIAL PRIMARY KEY,
-  sashimi_soort.id INTEGER,
-  salad_soort.id INTEGER
-); 
-
-DROP TABLE IF EXISTS related_products;
-CREATE TABLE related_products(
-  ID SERIAL PRIMARY KEY,
-  uramaki_soort.id INTEGER,
-  sidedish_soort.id INTEGER
-);
-
-DROP TABLE IF EXISTS related_products;
-CREATE TABLE related_products(
-  ID SERIAL PRIMARY KEY,
-  gunkan_soort.id INTEGER,
-  salad_soort.id INTEGER
-);
-
 DROP TABLE IF EXISTS nigiri_soort;
 CREATE TABLE nigiri_soort (
   ID SERIAL PRIMARY KEY,
@@ -105,8 +70,8 @@ CREATE TABLE gunkan_soort (
   price NUMERIC(10, 2)	
 );
 
-DROP TABLE IF EXISTS side dish_soort;
-CREATE TABLE side dish_soort (
+DROP TABLE IF EXISTS sidedish_soort;
+CREATE TABLE sidedish_soort (
   ID SERIAL PRIMARY KEY,
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2)	
@@ -118,6 +83,42 @@ CREATE TABLE salad_soort (
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2)	
 );
+
+DROP TABLE IF EXISTS related_products;
+CREATE TABLE related_products(
+  ID SERIAL PRIMARY KEY,
+  nigiri_soort INTEGER,
+  sidedish_soort INTEGER
+);
+
+DROP TABLE IF EXISTS related_products;
+CREATE TABLE related_products(
+  ID SERIAL PRIMARY KEY,
+  maki_soort INTEGER,
+  salad_soort INTEGER
+);
+
+DROP TABLE IF EXISTS related_products;
+CREATE TABLE related_products(
+  ID SERIAL PRIMARY KEY,
+  sashimi_soort INTEGER,
+  salad_soort INTEGER
+); 
+
+DROP TABLE IF EXISTS related_products;
+CREATE TABLE related_products(
+  ID SERIAL PRIMARY KEY,
+  uramaki_soort INTEGER,
+  sidedish_soort INTEGER
+);
+
+DROP TABLE IF EXISTS related_products;
+CREATE TABLE related_products(
+  ID SERIAL PRIMARY KEY,
+  gunkan_soort INTEGER,
+  salad_soort INTEGER
+);
+
 
 /*
 AS NigAiri
