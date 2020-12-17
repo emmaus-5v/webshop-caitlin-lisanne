@@ -29,7 +29,6 @@ insert into products (name, description, code, price) values ('Shrimp croquettes
  insert into products (name, description, code, price) values ('Sashimi salade','zalm salade','757434486-8', 5.50);
  insert into products (name, description, code, price) values ('Wakame salade','zeewier salade','531150277-0', 5.00);
  insert into products (name, description, code, price) values ('Ebiko salade','krab salade','891005079-9', 4.50);
- insert into products (name, description, code, price) values ('test alee', 'test alee', '891005079-9', 5.00);
 
 
  insert into soort (name) values ('Nigiri');
