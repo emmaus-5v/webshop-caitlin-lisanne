@@ -25,18 +25,6 @@ insert into products (name, description, code, price, soort_id) values ('Gunkan 
 insert into products (name, description, code, price, soort_id) values ('Gunkan Maguro', 'tonijn, olijfolie en sesam. 3 stuks', '457174385-8', 5.00, 14);
 insert into products (name, description, code, price, soort_id) values ('Gunkan Suzuki', 'zeebaars. 3 stuks', '031445258-3', 5.50, 15);
 
-/*
-insert into products (name, description, code, price, soort_id) values ('Chicken wings','6 stuks', '719322921-4', 4.80, 16);
-insert into products (name, description, code, price, soort_id) values ('Spring rolls', '10 stuks', '514202783-3', 5.50, 17);
-insert into products (name, description, code, price, soort_id) values ('Gyoza', 'kippastei. 6 stuks','185213824-6', 6.00, 18);
-insert into products (name, description, code, price, soort_id) values ('Yakitori', 'Kipspsies 5 stuks','229696258-0', 6.00, 19);
-insert into products (name, description, code, price, soort_id) values ('Ebi fry', 'gefrituurde garnalen 6 stuks','462606529-5', 7.00, 20);
-insert into products (name, description, code, price, soort_id) values ('Shrimp croquettes', 'garnalen kroketten 6 stuks','094829684-4', 6.00, 21);
- insert into products (name, description, code, price, soort_id) values ('Sashimi salade','zalm salade','757434486-8', 5.50, 22);
- insert into products (name, description, code, price, soort_id) values ('Wakame salade','zeewier salade','531150277-0', 5.00, 23);
- insert into products (name, description, code, price, soort_id) values ('Ebiko salade','krab salade','891005079-9', 4.50, 24);
-*/
-
 
  insert into soort (name, ingridients_id, erbij_id) values ('nigiri',1, 2);
  insert into soort (name, ingridients_id, erbij_id) values ('nigiri', 2, 3);
@@ -53,6 +41,7 @@ insert into products (name, description, code, price, soort_id) values ('Shrimp 
  insert into soort (name, ingridients_id, erbij_id) values ('gunkan', 13, 14);
  insert into soort (name, ingridients_id, erbij_id) values ('gunkan', 14, 15);
  insert into soort (name, ingridients_id, erbij_id) values ('gunkan', 15, 16);
+ 
 
 insert into erbij (name, id) values ('nigiri zalm', 1);
  insert into erbij (name, id) values ('nigiri tonijn', 2);
@@ -70,6 +59,7 @@ insert into erbij (name, id) values ('nigiri zalm', 1);
  insert into erbij (name, id) values ('gunkan maguro', 14);
  insert into erbij (name, id) values ('gunkan suzuki', 15);
 
+
  insert into ingridients (name) values ('zalm');
  insert into ingridients (name) values ('tonijn');
  insert into ingridients (name) values ('krab');
@@ -85,14 +75,3 @@ insert into erbij (name, id) values ('nigiri zalm', 1);
  insert into ingridients (name) values ('zalm, olijfolie en sesam');
  insert into ingridients (name) values ('tonijn, olijfolie en sesam');
  insert into ingridients (name) values ('zeebaars');
- /*
- insert into soort (name) values ('sideDished');
- insert into soort (name) values ('sideDished');
- insert into soort (name) values ('sideDished');
- insert into soort (name) values ('sideDished');
- insert into soort (name) values ('sideDished');
- insert into soort (name) values ('sideDished');
- insert into soort (name) values ('salad');
- insert into soort (name) values ('salad');
- insert into soort (name) values ('salad');
-*/
