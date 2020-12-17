@@ -38,4 +38,5 @@ insert into products (name, description, code, price, soort_id) values ('Shrimp 
  insert into soort (name) values ('Gunkan');
  insert into soort (name) values ('Side Dish');
  insert into soort (name) values ('Salad');
+ 
 
