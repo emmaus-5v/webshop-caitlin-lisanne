@@ -5,16 +5,13 @@ CREATE TABLE products (
   name VARCHAR(255),
   description VARCHAR(255),
   price NUMERIC(10, 2),
-  soort_id INTEGER,
-  nigiriSoort_id INTEGER,
-  maki.soort_id INTEGER
+  soort_id INTEGER
 );
 
 DROP TABLE IF EXISTS soort;
 CREATE TABLE soort (
   ID SERIAL PRIMARY KEY,
-  name VARCHAR(255),
-  nigiriSoort_id INTEGER
+  name VARCHAR(255)
 );
 /*
 nigiri.soort_id INTEGER,
