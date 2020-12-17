@@ -39,12 +39,4 @@ insert into products (name, description, code, price) values ('Shrimp croquettes
  insert into soort (name) values ('Side Dish');
  insert into soort (name) values ('Salad');
  
- insert into related_products (name) values ('Nigiri');
- insert into related_products (name) values ('Maki');
- insert into related_products (name) values ('Uramaki');
- insert into related_products (name) values ('Sashimi');
- insert into related_products (name) values ('Gunkan');
- insert into related_products (name) values ('Side Dish');
- insert into related_products (name) values ('Salad');
- 
 
