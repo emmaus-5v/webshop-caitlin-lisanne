@@ -4,7 +4,15 @@ CREATE TABLE products (
   code VARCHAR(15),
   name VARCHAR(255),
   description VARCHAR(255),
-  price NUMERIC(10, 2)
+  price NUMERIC(10, 2),
+  soort_id INTEGER,
+  nigiri.soort_id INTEGER,
+  maki.soort_id INTEGER,
+  uramaki.soort_id INTEGER,
+  gunkan.soort_id INTEGER,
+  sashimi.soort_id INTEGER,
+  sidedishes.soort_id INTEGER,
+  salades.soort_id INTEGER
 );
 
 DROP TABLE IF EXISTS soort;
@@ -13,72 +21,62 @@ CREATE TABLE soort (
   name VARCHAR(255)
 );
 /*
-SELECT * FROM products
-WHERE name  LIKE "%Nigiri";
 
-SELECT * FROM products
-WHERE name  LIKE "%Maki";
+SELECT * FROM products LEFT OUTER JOIN soort ON soort.id = products.soort_id;
+SELECT * FROM products LEFT OUTER JOIN nigiriSoort ON nigiriSoort.id = products.nigiriSoort_id;
+SELECT * FROM products LEFT OUTER JOIN makiSoort ON makiSoort.id = products.makiSoort_id;
+SELECT * FROM products LEFT OUTER JOIN uramakiSoort ON uramakiSoort.id = products.uramakiSoort_id;
+SELECT * FROM products LEFT OUTER JOIN sashimiSoort ON sashimiSoort.id = products.sashimiSoort_id;
+SELECT * FROM products LEFT OUTER JOIN gunkanSoort ON gunkanSoort.id = products.gunkanSoort_id;
+SELECT * FROM products LEFT OUTER JOIN sideDishesSoort ON sideDishesSoort.id = products.sideDishesSort_id;
+SELECT * FROM products LEFT OUTER JOIN saladSoort ON saladSoort.id = products.saladSoort_id;
 
-SELECT * FROM products
-WHERE name  LIKE "%Uramaki";
-
-SELECT * FROM products
-WHERE name  LIKE "%Sashimi";
-
-SELECT * FROM products
-WHERE name  LIKE "%Gunkan";
-
-SELECT * FROM products
-WHERE name NOT LIKE "%Nigiri";
-
-SELECT * FROM products
-WHERE name  LIKE "%salade";
 */
 
-DROP TABLE IF EXISTS nigiri_soort;
-CREATE TABLE nigiri_soort (
+DROP TABLE IF EXISTS nigiriSoort;
+CREATE TABLE nigiriSoort (
   ID SERIAL PRIMARY KEY,
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2)	
 );
 
-DROP TABLE IF EXISTS maki_soort;
-CREATE TABLE maki_soort (
+DROP TABLE IF EXISTS makiSoort;
+CREATE TABLE makiSoort (
   ID SERIAL PRIMARY KEY,
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2)	
 );
 
-DROP TABLE IF EXISTS uramaki_soort;
-CREATE TABLE uramaki_soort (
+DROP TABLE IF EXISTS uramakiSoort;
+CREATE TABLE uramakiSoort (
   ID SERIAL PRIMARY KEY,
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2)	
 );
 
-DROP TABLE IF EXISTS sashimi_soort;
-CREATE TABLE sashimi_soort (
+DROP TABLE IF EXISTS sashimiSoort;
+CREATE TABLE sashimiSoort (
   ID SERIAL PRIMARY KEY,
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2)	
 );
 
-DROP TABLE IF EXISTS gunkan_soort;
-CREATE TABLE gunkan_soort (
+DROP TABLE IF EXISTS gunkanSoort;
+CREATE TABLE gunkanSoort (
   ID SERIAL PRIMARY KEY,
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2)	
 );
 
-DROP TABLE IF EXISTS sidedish_soort;
-CREATE TABLE sidedish_soort (
+DROP TABLE IF EXISTS sideDishSoort;
+CREATE TABLE sideDishSoort (
   ID SERIAL PRIMARY KEY,
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2)	
 );
 
-DROP TABLE IF EXISTS salad_soort;
-CREATE TABLE salad_soort (
+DROP TABLE IF EXISTS saladSoort;
+CREATE TABLE saladSoort (
   ID SERIAL PRIMARY KEY,
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2)	
@@ -87,36 +85,36 @@ CREATE TABLE salad_soort (
 DROP TABLE IF EXISTS related_products;
 CREATE TABLE related_products(
   ID SERIAL PRIMARY KEY,
-  nigiri_soort INTEGER,
-  sidedish_soort INTEGER
+  nigiriSoort INTEGER,
+  sideDishSoort INTEGER
 );
 
 DROP TABLE IF EXISTS related_products;
 CREATE TABLE related_products(
   ID SERIAL PRIMARY KEY,
-  maki_soort INTEGER,
-  salad_soort INTEGER
+  makiSoort INTEGER,
+  saladSoort INTEGER
 );
 
 DROP TABLE IF EXISTS related_products;
 CREATE TABLE related_products(
   ID SERIAL PRIMARY KEY,
-  sashimi_soort INTEGER,
-  salad_soort INTEGER
+  sashimiSoort INTEGER,
+  saladSoort INTEGER
 ); 
-
+ 
 DROP TABLE IF EXISTS related_products;
 CREATE TABLE related_products(
   ID SERIAL PRIMARY KEY,
-  uramaki_soort INTEGER,
-  sidedish_soort INTEGER
+  uramakiSoort INTEGER,
+  sideDishSoort INTEGER
 );
 
 DROP TABLE IF EXISTS related_products;
 CREATE TABLE related_products(
   ID SERIAL PRIMARY KEY,
-  gunkan_soort INTEGER,
-  salad_soort INTEGER
+  gunkanSoort INTEGER,
+  saladSoort INTEGER
 );
 
 
