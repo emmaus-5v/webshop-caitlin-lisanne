@@ -6,7 +6,8 @@ CREATE TABLE products (
   description VARCHAR(255),
   price NUMERIC(10, 2),
   soort_id INTEGER,
-  nigiriSoort_id INTEGER
+  nigiriSoort_id INTEGER,
+  maki.soort_id INTEGER
 );
 
 DROP TABLE IF EXISTS soort;
@@ -25,7 +26,7 @@ nigiri.soort_id INTEGER,
   salades.soort_id INTEGER
 
 SELECT * FROM products LEFT OUTER JOIN soort ON soort.id = products.soort_id;
-SELECT * FROM soort LEFT OUTER JOIN nigiriSoort ON nigiriSoort.id = soort.nigiriSoort_id LEFT OUTER JOIN products ON products.id = nigiriSoort.products_id;
+SELECT * FROM soort  LEFT OUTER JOIN nigiriSoort ON nigiriSoort.id = soort.nigiriSoort_id;
 SELECT * FROM products LEFT OUTER JOIN makiSoort ON makiSoort.id = products.makiSoort_id;
 SELECT * FROM products LEFT OUTER JOIN uramakiSoort ON uramakiSoort.id = products.uramakiSoort_id;
 SELECT * FROM products LEFT OUTER JOIN sashimiSoort ON sashimiSoort.id = products.sashimiSoort_id;
@@ -38,51 +39,78 @@ SELECT * FROM products LEFT OUTER JOIN saladSoort ON saladSoort.id = products.sa
 DROP TABLE IF EXISTS nigiriSoort;
 CREATE TABLE nigiriSoort (
   ID SERIAL PRIMARY KEY,
+  name VARCHAR(255),
   visnaam VARCHAR(255),	
   price NUMERIC(10, 2),
-  products_id INTEGER	
+  code VARCHAR(15),
+  description VARCHAR(255),
+  soort_id INTEGER
 );
 
 DROP TABLE IF EXISTS makiSoort;
 CREATE TABLE makiSoort (
   ID SERIAL PRIMARY KEY,
+  name VARCHAR(255),
   visnaam VARCHAR(255),	
-  price NUMERIC(10, 2)	
+  price NUMERIC(10, 2),
+  code VARCHAR(15),
+  description VARCHAR(255),
+  soort_id INTEGER
 );
 
 DROP TABLE IF EXISTS uramakiSoort;
 CREATE TABLE uramakiSoort (
-  ID SERIAL PRIMARY KEY,
+ ID SERIAL PRIMARY KEY,
+  name VARCHAR(255),
   visnaam VARCHAR(255),	
-  price NUMERIC(10, 2)	
+  price NUMERIC(10, 2),
+  code VARCHAR(15),
+  description VARCHAR(255),
+  soort_id INTEGER	
 );
 
 DROP TABLE IF EXISTS sashimiSoort;
 CREATE TABLE sashimiSoort (
-  ID SERIAL PRIMARY KEY,
+ ID SERIAL PRIMARY KEY,
+  name VARCHAR(255),
   visnaam VARCHAR(255),	
-  price NUMERIC(10, 2)	
+  price NUMERIC(10, 2),
+  code VARCHAR(15),
+  description VARCHAR(255),
+  soort_id INTEGER
 );
 
 DROP TABLE IF EXISTS gunkanSoort;
 CREATE TABLE gunkanSoort (
-  ID SERIAL PRIMARY KEY,
+ ID SERIAL PRIMARY KEY,
+  name VARCHAR(255),
   visnaam VARCHAR(255),	
-  price NUMERIC(10, 2)	
+  price NUMERIC(10, 2),
+  code VARCHAR(15),
+  description VARCHAR(255),
+  soort_id INTEGER
 );
 
 DROP TABLE IF EXISTS sideDishSoort;
 CREATE TABLE sideDishSoort (
   ID SERIAL PRIMARY KEY,
+  name VARCHAR(255),
   visnaam VARCHAR(255),	
-  price NUMERIC(10, 2)	
+  price NUMERIC(10, 2),
+  code VARCHAR(15),
+  description VARCHAR(255),
+  soort_id INTEGER
 );
 
 DROP TABLE IF EXISTS saladSoort;
 CREATE TABLE saladSoort (
   ID SERIAL PRIMARY KEY,
+  name VARCHAR(255),
   visnaam VARCHAR(255),	
-  price NUMERIC(10, 2)	
+  price NUMERIC(10, 2),
+  code VARCHAR(15),
+  description VARCHAR(255),
+  soort_id INTEGER	
 );
 
 DROP TABLE IF EXISTS related_products;
