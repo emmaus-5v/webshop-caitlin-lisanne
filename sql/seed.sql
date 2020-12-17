@@ -35,4 +35,8 @@ insert into products (name, description, code, price) values ('Shrimp croquettes
  insert into soort (name) values ('Nigiri');
  insert into soort (name) values ('Maki');
  insert into soort (name) values ('Uramaki');
+ insert into soort (name) values ('Sashimi');
+ insert into soort (name) values ('Gunkan');
+ insert into soort (name) values ('Side Dish');
+ insert into soort (name) values ('Salad');
 
