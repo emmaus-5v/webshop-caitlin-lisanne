@@ -5,54 +5,53 @@ CREATE TABLE products (
   name VARCHAR(255),
   description VARCHAR(255),
   price NUMERIC(10, 2),
-  soort_id INTEGER
+  soort_id INTEGER,
+  erbij_id INTEGER
 );
 
 DROP TABLE IF EXISTS soort;
 CREATE TABLE soort (
   ID SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  ingridients_id INTEGER,
+  soort_id INTEGER,
+  erbij_id INTEGER
+);
+
+DROP TABLE IF EXISTS ingridients;
+CREATE TABLE ingridients (
+  ID SERIAL PRIMARY KEY,
   name VARCHAR(255)
 );
+
+
+DROP TABLE IF EXISTS erbij;
+CREATE TABLE erbij (
+  ID SERIAL PRIMARY KEY,
+  name VARCHAR(255)
+);
+
 /*
-nigiri.soort_id INTEGER,
-  maki.soort_id INTEGER,
-  uramaki.soort_id INTEGER,
-  gunkan.soort_id INTEGER,
-  sashimi.soort_id INTEGER,
-  sidedishes.soort_id INTEGER,
-  salades.soort_id INTEGER
 
-SELECT * FROM products LEFT OUTER JOIN soort ON soort.id = products.soort_id;
-SELECT * FROM soort  LEFT OUTER JOIN nigiriSoort ON nigiriSoort.id = soort.nigiriSoort_id;
-SELECT * FROM products LEFT OUTER JOIN makiSoort ON makiSoort.id = products.makiSoort_id;
-SELECT * FROM products LEFT OUTER JOIN uramakiSoort ON uramakiSoort.id = products.uramakiSoort_id;
-SELECT * FROM products LEFT OUTER JOIN sashimiSoort ON sashimiSoort.id = products.sashimiSoort_id;
-SELECT * FROM products LEFT OUTER JOIN gunkanSoort ON gunkanSoort.id = products.gunkanSoort_id;
-SELECT * FROM products LEFT OUTER JOIN sideDishesSoort ON sideDishesSoort.id = products.sideDishesSort_id;
-SELECT * FROM products LEFT OUTER JOIN saladSoort ON saladSoort.id = products.saladSoort_id;
+DIT IS DE RECOMMENDATION SELECT, DEZE IS DUS GOED!!
 
+SELECT products.name, erbij.name FROM products JOIN soort ON soort.id = products.soort_id JOIN erbij ON erbij.id = soort.erbij_id;
 */
 
+
+/*
 DROP TABLE IF EXISTS nigiriSoort;
 CREATE TABLE nigiriSoort (
   ID SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  visnaam VARCHAR(255),	
-  price NUMERIC(10, 2),
-  code VARCHAR(15),
-  description VARCHAR(255),
-  soort_id INTEGER
+  visnaam VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS makiSoort;
 CREATE TABLE makiSoort (
   ID SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  visnaam VARCHAR(255),	
-  price NUMERIC(10, 2),
-  code VARCHAR(15),
-  description VARCHAR(255),
-  soort_id INTEGER
+  visnaam VARCHAR(255)	
 );
 
 DROP TABLE IF EXISTS uramakiSoort;
@@ -146,7 +145,7 @@ CREATE TABLE related_products(
 );
 
 
-/*
+
 AS NigAiri
  SELECT * FROM products 
   WHERE name = 'Nigiri zalm' 
